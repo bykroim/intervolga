@@ -1,0 +1,13 @@
+.idea/*
+/bitrix
+/upload
+/cgi-bin
+*.config
+sitemap*.xml
+restore.php
+*.log
+*.txt
+*.csv
+*.tar.*
+.htaccess*
+.htsecure*
