@@ -3,16 +3,17 @@
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="<?echo LANGUAGE_ID?>">
 <head>
     <?$APPLICATION->ShowHead();?>
     <title><?$APPLICATION->ShowTitle()?></title>
-    <link rel="stylesheet" href="/local/templates/.default/template_styles.css">
-    <script type="text/javascript" src="/local/templates/.default/js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="/local/templates/.default/js/slides.min.jquery.js"></script>
-    <script type="text/javascript" src="/local/templates/.default/js/jquery.carouFredSel-6.1.0-packed.js"></script>
-    <script type="text/javascript" src="/local/templates/.default/js/functions.js"></script>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/template_style.css");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/jquery-1.8.2.min.js");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/slides.min.jquery.js");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/jquery.carouFredSel-6.1.0-packed.js");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/functions.js");?>
 
+    <link rel="shortcut icon" type="image/x-ico" href="/local/templates/.default/favicon.ico"/>
     <!--[if gte IE 9]><style type="text/css">.gradient {filter: none;}</style><![endif]-->
 </head>
 <body>
