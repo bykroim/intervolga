@@ -24,7 +24,25 @@
                                     "PATH" => "/include/phone.php"
                                 )
                             );?></span>	<br/>
-                <?=GetMessage('WORKING_TIME')?> <span class="workhours">ежедневно с 9-00 до 18-00</span>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/include/working.php"
+                    )
+                );?> <span class="workhours"><?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/hours.php"
+                        )
+                    );?></span>
             </td>
             <td style="width:232px">
                 <form action="">
@@ -39,7 +57,16 @@
             <td style="padding-top: 11px;">
 							<span class="hd_singin"><a id="hd_singin_but_open" href="">Войти на сайт</a>
 							<div class="hd_loginform">
-								<span class="hd_title_loginform">Войти на сайт</span>
+								<span class="hd_title_loginform"><?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/include/entry.php"
+                                        )
+                                    );?></span>
 								<form name="" method="" action="">
 
 									<input placeholder="Логин"  type="text">
@@ -55,7 +82,16 @@
 								<span class="hd_close_loginform">Закрыть</span>
 							</div>
 							</span><br>
-                <a href="" class="hd_signup">Зарегистрироваться</a>
+                <a href="" class="hd_signup"><?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/register.php"
+                        )
+                    );?></a>
             </td>
         </tr>
     </table>
