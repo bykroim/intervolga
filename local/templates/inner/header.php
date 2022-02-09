@@ -10,6 +10,8 @@ IncludeTemplateLangFile(__FILE__);
 
     <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/template_styles.css");
     $APPLICATION->AddHeadScript("/local/templates/.default/js/jquery-1.8.2.min.js");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/slides.min.jquery.js");
+    $APPLICATION->AddHeadScript("/local/templates/.default/js/jquery.carouFredSel-6.1.0-packed.js");
     $APPLICATION->AddHeadScript("/local/templates/.default/js/functions.js");?>
 
     <link rel="shortcut icon" type="image/x-ico" href="/local/templates/.default/favicon.ico"/>
